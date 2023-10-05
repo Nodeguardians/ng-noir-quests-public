@@ -1,0 +1,11 @@
+[package]
+name = "noir_tornado"
+type = "bin"
+authors = [""]
+compiler_version = "0.10.3"
+version = "0.1.0"
+
+[dependencies]
+
+[tool.Nodeguardians]
+part_1 = "Noir Circuit"

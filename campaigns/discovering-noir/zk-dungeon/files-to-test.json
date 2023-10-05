@@ -1,0 +1,5 @@
+[
+    "proofs/zk_dungeon.proof",
+    "src/dungeon.nr",
+    "src/main.nr"
+]

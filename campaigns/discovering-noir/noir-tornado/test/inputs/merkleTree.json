@@ -1,0 +1,48 @@
+{
+    "secrets": [
+        101,
+        202,
+        303,
+        404,
+        505,
+        606,
+        707,
+        808
+    ],
+    "nullifiers": [
+        "0x2ea1c417a1b4e9240682e9e912d06d1c3e4147e9ffd0e38dd92faeaae8a99141",
+        "0x1d974076de37ff9936d78fd0bce18569af4e22ec2bd6f2c803ece1b60a084f7b",
+        "0x2b1a57e7e3d9cec76c0082e6cf29d774081ed284f5fe5ae839b6d48a2e2fa851",
+        "0x2c0245c50526a0c853a2e965495419cd9e014c6a65b9b5cc4b083006ba346f5c",
+        "0x03ba549ecfc4a9fe8c8df46e2e6df55e87072dde9af449cec875206c969a7eb5",
+        "0x03c2476fb2624380cff91f1482a268bcad271bc8fb1aa9df59e113cf94391620",
+        "0x0a192fe325128223ceb99afb531188200cb897c98352a67cfa35d99dffd66462",
+        "0x2638e7174052347003cbc5d01b53591e541b959581d49e8224a1b668f1af68dc"
+    ],
+    "levels": [
+        [
+            "0x7dccbf881208e9864789967f9f5b7a2ef44edae8518f7cea715590c528398a7c"
+        ],
+        [
+            "0x7a2addaeb21d863c085e74ede1877899fe6647cf9f87c8792d2b1d69eac45391",
+            "0x5586e4ec017f14feb9175e5d1b2a0a92f1d3d0fa2190790a94521ce31c7dd2b6"
+        ],
+        [
+            "0x2bc3fc42ad03d6343ed9a41b9b07666c912aa77250a3a22d3bbe683a5d2445cd",
+            "0x5ad02b33508a7e929094b5355fef44b9b256cb06b9cd6a65feda7b5a3baa809c",
+            "0x86a95cbcd905759f81880f7a175a9dfdb182e0cfb097010957b10389c742e2dc",
+            "0x238b95e7fb5fe7c17684c942b31d78a9d355a37547b1cc908c9d8e10fb13bac9"
+        ],
+        [
+            "0x005b4cb6bdddeaa739a76cd8f61b0fa3ade9fc79cb89ec0b3a484eb82b796ef5",
+            "0x0ed0dffd4d643135d252d6a9032dd33c22703c754996151cd8e744b5c96b5f47",
+            "0x18ae3273f3da3765af7ce65d99259f0d205020866083dffcf8678563aacb1efd",
+            "0x05dfbc194420e56dc7d10318c3db9cf424bc3985843f5ab7e6ee67b27154aaa7",
+            "0x00d94c5355582e865fd3edbf99d5fa5605040f57f34de022d0d90e742fceea4c",
+            "0x2e92fd858a7ee116ff8f33d378242c2e39c86621a121ae8bd5c5f7f065625f50",
+            "0x2931fe2ebf0355722aa37ec46f8a3de03a23a05ceb5c7fbf1d48db2151ca3c41",
+            "0x109b1c09afbbb8d009b964a03c6aab9574c0725021fbbf671a6e727e696d0365"
+        ]
+    ],
+    "root": "0x7dccbf881208e9864789967f9f5b7a2ef44edae8518f7cea715590c528398a7c"
+}

@@ -1,0 +1,12 @@
+{
+    "name": "hello-noir",
+    "version": "0.1.0",
+    "scripts": {
+        "test": "mocha --timeout 5000",
+        "write-vk": "node scripts/writeVk.js",
+        "decode-proof": "node decodeProof.js",
+        "verify-proof": "bb.js verify -p proofs/hello_noir --vk target/hello_noir.vk"
+    },
+    "author": "",
+    "license": "MIT"
+}

@@ -1,0 +1,24 @@
+{
+    "private": true,
+    "name": "ng-noir-quests",
+    "version": "0.1.0",
+    "repository": "https://github.com/Nodeguardians/ng-noir-quests.git",
+    "scripts": {
+        "test": "mocha --timeout 60000",
+        "test:deployment": "mocha --grep Deployment --timeout 60000"
+    },
+    "workspaces": [
+        "campaigns/**"
+    ],
+    "dependencies": {
+        "@nomicfoundation/hardhat-chai-matchers": "^1.0.4",
+        "@nomiclabs/hardhat-ethers": "^2.2.1",
+        "chai": "^4.3.7",
+        "command-exists": "^1.2.9",
+        "dotenv": "^16.3.1",
+        "hardhat": "^2.17.4",
+        "mocha": "^10.2.0",
+        "mochawesome": "^7.1.3",
+        "toml": "^3.0.0"
+    }
+}
