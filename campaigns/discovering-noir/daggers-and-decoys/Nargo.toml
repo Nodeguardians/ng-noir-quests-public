@@ -1,5 +1,5 @@
 [package]
-name = "noir_tornado"
+name = "daggers_and_decoys"
 type = "bin"
 authors = [""]
 compiler_version = "0.10.3"

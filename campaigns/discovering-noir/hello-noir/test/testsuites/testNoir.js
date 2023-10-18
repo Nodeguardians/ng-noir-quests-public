@@ -1,14 +1,8 @@
-const commandExists = require("command-exists");
 const fs = require("fs");
 const { spawnSync } = require("child_process");
 const { AssertionError } = require("chai");
 
 async function runNargoCheck() {
-    // Check nargo exists
-    if (!commandExists.sync("nargo")) {
-        throw new AssertionError("command not found: nargo");
-    }
-
     // Check for compile error
     const result = spawnSync("nargo", ["check"] );
     if (result.status != 0) {
@@ -24,8 +18,8 @@ async function runNargoCheck() {
     }
 }
 
-function runNargoTest(testFile, testName) {
-    const testPath = `tests::${testFile}::${testName}`;
+function runNargoTest(testName) {
+    const testPath = `tests::${testName}`;
     const result = spawnSync("nargo", ["test", testPath] );
 
     if (result.status != 0) {

@@ -1,5 +1,0 @@
-[
-    "contracts/plonk_vk.sol",
-    "contracts/ShroudedDagger.sol",
-    "src/main.nr"
-]

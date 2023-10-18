@@ -4,7 +4,7 @@
     "version": "0.1.0",
     "repository": "https://github.com/Nodeguardians/ng-noir-quests.git",
     "scripts": {
-        "test": "mocha --timeout 60000",
+        "test": "mocha && npm run test --workspaces",
         "test:deployment": "mocha --grep Deployment --timeout 60000"
     },
     "workspaces": [

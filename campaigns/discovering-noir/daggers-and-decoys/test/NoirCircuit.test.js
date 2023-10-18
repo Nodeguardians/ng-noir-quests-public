@@ -1,6 +1,6 @@
 const { runNargoTest, runNargoCheck } = require("./testsuites/testNoir.js");
 
-describe("Noir Circuit (Part 1)", function() {
+describe("Noir Circuit (Part 2)", function() {
 
   const testFile = "main_test_1";
 

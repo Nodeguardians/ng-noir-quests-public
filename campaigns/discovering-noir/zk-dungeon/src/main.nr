@@ -1,4 +1,4 @@
-mod dungeon; // Do not modify these first 2 lines!
+mod dungeon;
 mod tests;
 
 fn main(
@@ -6,5 +6,6 @@ fn main(
     dagger: pub dungeon::Square,
     path: [dungeon::Square; 8]
 ) {
-    // Part 3
+    dungeon::is_valid_path(path, dagger);
+    dungeon::is_safe_path(path, watcher_map);
 }
