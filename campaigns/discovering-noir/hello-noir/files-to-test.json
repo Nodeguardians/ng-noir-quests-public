@@ -1,3 +1,4 @@
 [
-    "src/main.nr"
+    "src/main.nr",
+    "proofs/hello_noir.proof"
 ]

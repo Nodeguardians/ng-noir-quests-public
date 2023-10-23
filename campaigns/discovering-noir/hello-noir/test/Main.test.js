@@ -9,7 +9,7 @@ describe("Simple Noir Spell (Part 2)", function() {
     describe("Public Test 1", function() {
 
         it("Should pass tests in main_test.nr", async function() {
-            runNargoTest("test");
+            runNargoTest("main_test");
         });
 
     });
