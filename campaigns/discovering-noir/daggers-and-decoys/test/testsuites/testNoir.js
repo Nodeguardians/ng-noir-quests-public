@@ -19,7 +19,7 @@ function runNargoTest(testFile, testName) {
     const testPath = `tests::${testFile}::${testName}`;
     const result = spawnSync("nargo", ["test", testPath] );
 
-    expect(result.status).to.equal(0, result.stderr.toString());
+    expect(result.status).to.equal(0, "\n" + result.stderr.toString());
 }
 
 module.exports = {
