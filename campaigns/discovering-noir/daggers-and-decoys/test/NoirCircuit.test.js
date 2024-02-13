@@ -11,21 +11,21 @@ describe("Noir Circuit (Part 2)", function() {
   describe("Public Test 1", function() {
 
     it("Should allow valid input", async function() {
-        runNargoTest(testFile, "test_main_valid_1");
-        runNargoTest(testFile, "test_main_valid_2");
+      runNargoTest(testFile, "test_main_valid_1");
+      runNargoTest(testFile, "test_main_valid_2");
     });
 
   });
 
   describe("Public Test 2", function() {
 
-    it("Should flag invalid root", async function() {
-        runNargoTest(testFile, "test_main_invalid_root");
-    });
+  it("Should flag invalid root", async function() {
+    runNargoTest(testFile, "test_main_invalid_root");
+  });
 
-    it("Should flag invalid nullifier", async function() {
-        runNargoTest(testFile, "test_main_invalid_nullifier");
-    });
+  it("Should flag invalid nullifier", async function() {
+    runNargoTest(testFile, "test_main_invalid_nullifier");
+  });
     
   });
 

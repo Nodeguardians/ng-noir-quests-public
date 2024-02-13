@@ -11,27 +11,27 @@ describe("Is Valid Path (Part 1)", function() {
   describe("Public Test 1", function() {
 
     it("Should flag out-of-bounds", async function() {
-        runNargoTest(testFile, "test_out_of_bounds");
+      runNargoTest(testFile, "test_out_of_bounds");
     });
 
     it("Should flag invalid move", async function() {
-        runNargoTest(testFile, "test_invalid_move_1");
-        runNargoTest(testFile, "test_invalid_move_2");
+      runNargoTest(testFile, "test_invalid_move_1");
+      runNargoTest(testFile, "test_invalid_move_2");
     });
     
     it("Should flag invalid start", async function() {
-        runNargoTest(testFile, "test_invalid_start");
+      runNargoTest(testFile, "test_invalid_start");
     });
 
     it("Should flag invalid end", async function() {
-        runNargoTest(testFile, "test_invalid_end");
+      runNargoTest(testFile, "test_invalid_end");
     });
 
   });
 
   describe("Public Test 2", function() {
     it("Should allow valid path", async function() {
-        runNargoTest(testFile, "test_valid_path");
+      runNargoTest(testFile, "test_valid_path");
     });
   });
 

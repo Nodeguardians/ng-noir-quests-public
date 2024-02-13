@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "daggers-and-decoys",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "repository": "https://github.com/Nodeguardians/ng-noir-quests.git",
     "scripts": {
         "test": "npx hardhat test",
