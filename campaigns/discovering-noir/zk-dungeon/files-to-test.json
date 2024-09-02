@@ -1,4 +1,4 @@
 [
-    "proofs/zk_dungeon.proof",
+    "proofs/zk_dungeon",
     "src/dungeon.nr"
 ]

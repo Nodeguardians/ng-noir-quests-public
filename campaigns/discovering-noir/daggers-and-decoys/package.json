@@ -1,10 +1,15 @@
 {
     "private": true,
     "name": "daggers-and-decoys",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "repository": "https://github.com/Nodeguardians/ng-noir-quests.git",
     "scripts": {
         "test": "npx hardhat test",
         "test:hardhat": "npx hardhat test"
+    },
+    "dependencies": {
+        "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+        "@nomiclabs/hardhat-ethers": "^2.2.2",
+        "hardhat": "^2.13.0"
     }
 }
