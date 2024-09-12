@@ -4,6 +4,18 @@ const { execSync } = require("child_process");
 const fs = require("fs");
 let toml = require("toml");
 
+// Takes raw proof and splits it into public inputs and proof as hex strings
+function splitProof(proofBuffer) {
+  const publicInputs = proofBuffer.subarray(0, 32 * 33);
+  const proof = proofBuffer.subarray(32 * 33);
+
+  return {
+    publicInputs: "0x" + publicInputs.toString("hex"),
+    proof: "0x" + proof.toString("hex")
+  };
+
+}
+
 function testSpell(subsuiteType, dataPath) {
     
   let spell;
@@ -25,23 +37,14 @@ function testSpell(subsuiteType, dataPath) {
     let treeData = fs.readFileSync(`${dataPath}/merkleTree.json`);
     merkleTree = JSON.parse(treeData);
 
-    if (fs.existsSync(`${dataPath}/test.proof`)) {
-      // Use proof if pre-generated
-      validProof = "0x" + fs.readFileSync(`${dataPath}/test.proof`).toString();
-    } else {
-      // Else compute proof (in a temp file)
-      execSync(
-        `nargo prove \
-        -p ${dataPath}/TestProver.toml \
-        -v ${dataPath}/TestVerifier.toml`
-      );
-        
-      // Read proof (and delete temp file)
-      let proofData = fs.readFileSync("./proofs/daggers_and_decoys.proof");
-      fs.rmSync("./proofs/daggers_and_decoys.proof");
-      
-      validProof = "0x" + proofData.toString();
-    }
+    // Compute proof
+    execSync(`nargo execute -p ${dataPath}/TestProver.toml witness.gz`);
+    execSync("bb prove -b ./target/daggers_and_decoys.json\
+      -w ./target/witness.gz -o ./target/test_proof");
+
+    // Read proof (and delete temp file)
+    let proofData = fs.readFileSync("./target/test_proof");
+    validProof = splitProof(proofData).proof;
   });
 
   beforeEach(async function () {
@@ -146,7 +149,7 @@ function testSpell(subsuiteType, dataPath) {
       await expect(tx).to.be.revertedWith("REPLAYED_NULLIFIER");
     });
 
-      it("Should reject invalid proof in pullDagger()", async function () {
+    it("Should reject invalid proof in pullDagger()", async function () {
         for (let i = 0; i < 8; i++) {
           await spell.connect(signers[i])
             .giveDagger(merkleTree.levels[3][i]);

@@ -2,7 +2,7 @@
 name = "hello_noir"
 type = "bin"
 authors = [""]
-compiler_version = "0.22.0"
-version = "1.1.0"
+compiler_version = "0.31.0"
+version = "1.2.0"
 
 [dependencies]

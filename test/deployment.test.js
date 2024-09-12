@@ -128,7 +128,7 @@ describe("Deployment Configuration Test", async function() {
         
                     assert(fs.existsSync(filePath), `Invalid file path: ${filePath} in ${filesToTestPath}`);
                     assert(
-                        filePath.endsWith(".proof") || filePath.endsWith(".sol") || filePath.endsWith(".nr"), 
+                        filePath.includes("proof") || filePath.endsWith(".sol") || filePath.endsWith(".nr"), 
                         `File must either be *.proof, *.nr or *.sol: ${filePath} in ${filesToTestPath}`
                     );
                 }
